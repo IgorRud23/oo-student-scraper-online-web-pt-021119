@@ -3,6 +3,7 @@ require 'pry'
 require 'nokogiri'
 
 class Scraper
+  
   def self.scrape_index_page(index_url)
      students_hash = []
     html = Nokogiri::HTML(open(index_url))
@@ -32,4 +33,4 @@ class Scraper
         students_hash[:bio] = html.css("div.bio-content p").text
     students_hash
   end
-end	
+end
