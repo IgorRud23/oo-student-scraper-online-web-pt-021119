@@ -18,6 +18,6 @@ students_array.each{|student| Student.new(student)}
   end
 
   def self.all
-
+@@all 
   end
 end
